@@ -1,0 +1,29 @@
+{
+    "name": "sisalmrafi/webartisan",
+    "description": "null",
+    "type": "libarary",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sislamrafi",
+            "email": "sislamrafi333@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sislamrafi\\Webartisan\\":"src/"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Sislamrafi\\Webartisan\\WebArtisanServiceProvider"
+            ],
+            "aliases":[
+
+            ]
+        }
+    }
+}
