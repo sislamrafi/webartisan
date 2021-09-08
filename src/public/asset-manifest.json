@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "vendor/sislamrafi/webartisan/static/css/main.6134c8c2.chunk.css",
+    "main.js": "vendor/sislamrafi/webartisan/static/js/main.023d570f.chunk.js",
+    "main.js.map": "vendor/sislamrafi/webartisan/static/js/main.023d570f.chunk.js.map",
+    "runtime-main.js": "vendor/sislamrafi/webartisan/static/js/runtime-main.9ce74de8.js",
+    "runtime-main.js.map": "vendor/sislamrafi/webartisan/static/js/runtime-main.9ce74de8.js.map",
+    "static/css/2.28bb0c3d.chunk.css": "vendor/sislamrafi/webartisan/static/css/2.28bb0c3d.chunk.css",
+    "static/js/2.d4e14e62.chunk.js": "vendor/sislamrafi/webartisan/static/js/2.d4e14e62.chunk.js",
+    "static/js/2.d4e14e62.chunk.js.map": "vendor/sislamrafi/webartisan/static/js/2.d4e14e62.chunk.js.map",
+    "static/js/3.8de55cc1.chunk.js": "vendor/sislamrafi/webartisan/static/js/3.8de55cc1.chunk.js",
+    "static/js/3.8de55cc1.chunk.js.map": "vendor/sislamrafi/webartisan/static/js/3.8de55cc1.chunk.js.map",
+    "index.html": "vendor/sislamrafi/webartisan/index.html",
+    "static/css/2.28bb0c3d.chunk.css.map": "vendor/sislamrafi/webartisan/static/css/2.28bb0c3d.chunk.css.map",
+    "static/css/main.6134c8c2.chunk.css.map": "vendor/sislamrafi/webartisan/static/css/main.6134c8c2.chunk.css.map",
+    "static/js/2.d4e14e62.chunk.js.LICENSE.txt": "vendor/sislamrafi/webartisan/static/js/2.d4e14e62.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "vendor/sislamrafi/webartisan/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ce74de8.js",
+    "static/css/2.28bb0c3d.chunk.css",
+    "static/js/2.d4e14e62.chunk.js",
+    "static/css/main.6134c8c2.chunk.css",
+    "static/js/main.023d570f.chunk.js"
+  ]
+}

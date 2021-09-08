@@ -2,7 +2,10 @@
 
 namespace Sislamrafi\Webartisan;
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
+use Sislamrafi\Webartisan\App\Http\Middleware\PreventRequestsDuringMaintenance;
 
 class WebArtisanServiceProvider extends ServiceProvider
 {
@@ -12,7 +15,37 @@ class WebArtisanServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {   
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+    {
+        //$kernel = $this->app->make(Kernel::class);
+        //$kernel->pushMiddleware(PreventRequestsDuringMaintenance::class);
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+              __DIR__.'/config/app.php' => config_path('webartisan.php'),
+            ], 'config');
+
+            $this->publishes([
+                __DIR__.'/public' => public_path('vendor/sislamrafi/webartisan'),
+            ], 'public');
+        }
+
+        $this->registerRoutes();
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'sislamrafi.webartisan');
+    }
+
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__.'/config/app.php', 'webartisan');
+    }
+
+    protected function registerRoutes()
+    {
+        Route::middleware('web')
+                ->namespace('Sislamrafi\Webartisan')
+                ->group(__DIR__.'/routes/web.php');
+        Route::prefix('api')
+                ->middleware('api')
+                ->namespace('Sislamrafi\Webartisan')
+                ->group(__DIR__.'/routes/api.php');
     }
 }
