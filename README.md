@@ -81,6 +81,12 @@ Run any artisan command you want. enjoy :)
     list
     cls
 ```
+For loging to terminal use:
+```sh
+login [username] [password]
+example:
+login admin admin123
+```
 Here `cls` command will clear screen.
 <!-- ROADMAP -->
 
