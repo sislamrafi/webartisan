@@ -116,7 +116,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [sislamrafi333@gmail.com](https://www.facebook.com/sislam.rafi/) - email
+S Islam Rafi - [sislamrafi333@gmail.com](https://www.facebook.com/sislam.rafi/) - email
 
 Project Link: [https://github.com/sislamrafi/webartisan](https://github.com/sislamrafi/webartisan)
 
