@@ -64,7 +64,7 @@ This is an example of how to list things you need to use the software and how to
     ARTISAN_ADMIN_DEFAULT_PASS=
     ARTISAN_TERMINAL_NAME=artisanTerminal
     ARTISAN_GUEST_NAME=guest@terminal
-    ```sh
+    ```
         Default username = `admin` and pass=`admin123`.
     Here `ARTISAN_ADMIN_USERNAME` is the email or user name of admin. This package will first check if admin is login or not in the main website. If not it will request for login in terminal panel. `ARTISAN_ADMIN_TABLENAME` is the database table name of users or admins. `ARTISAN_ADMIN_COLUMN` is the table column name which will be checked to match `ARTISAN_ADMIN_USERNAME`.
 
@@ -74,7 +74,7 @@ This is an example of how to list things you need to use the software and how to
 
 Simply navigate to url `https://127.0.0.0:8000/artisan` you will see a terminal. :)
 Run any artisan command you want. enjoy :)
-```
+```sh
     migrate
     up
     down
