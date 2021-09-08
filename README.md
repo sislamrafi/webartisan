@@ -67,6 +67,10 @@ This is an example of how to list things you need to use the software and how to
     ```
         Default username = `admin` and pass=`admin123`.
     Here `ARTISAN_ADMIN_USERNAME` is the email or user name of admin. This package will first check if admin is login or not in the main website. If not it will request for login in terminal panel. `ARTISAN_ADMIN_TABLENAME` is the database table name of users or admins. `ARTISAN_ADMIN_COLUMN` is the table column name which will be checked to match `ARTISAN_ADMIN_USERNAME`.
+6.  If you add this package to your existing project, don't forget to clear cache
+    ```sh
+    php artisan optimize:clear
+    ```
 
 <!-- USAGE EXAMPLES -->
 
