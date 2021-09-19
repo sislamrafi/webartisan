@@ -58,6 +58,7 @@ This is an example of how to list things you need to use the software and how to
 
 5.  Edit environment variable (in .env file). Add those variables
     ```
+    ARTISAN_ADMIN_GUARD=web
     ARTISAN_ADMIN_USERNAME=
     ARTISAN_ADMIN_TABLENAME=users
     ARTISAN_ADMIN_COLUMN=email

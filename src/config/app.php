@@ -7,4 +7,5 @@ return [
     'admin_default_pass' => env('ARTISAN_ADMIN_DEFAULT_PASS', 'admin123'),
     'terminal_name' => env('ARTISAN_TERMINAL_NAME','onlineArtisan'),
     'guest_user_name' => env('ARTISAN_GUEST_NAME','guest@artisann'),
+    'admin_guard'=>env('ARTISAN_ADMIN_GUARD','user'),
 ];
