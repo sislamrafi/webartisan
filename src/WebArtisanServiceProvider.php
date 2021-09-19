@@ -28,6 +28,7 @@ class WebArtisanServiceProvider extends ServiceProvider
                 __DIR__.'/public' => public_path('vendor/sislamrafi/webartisan'),
             ], 'public');
         }
+        $this->commandRegister();
 
         $this->registerRoutes();
         $this->loadViewsFrom(__DIR__.'/resources/views', 'sislamrafi.webartisan');
@@ -47,5 +48,11 @@ class WebArtisanServiceProvider extends ServiceProvider
                 ->middleware('api')
                 ->namespace('Sislamrafi\Webartisan')
                 ->group(__DIR__.'/routes/api.php');
+    }
+
+    protected function commandRegister(){
+        $this->commands([
+            \Sislamrafi\Webartisan\App\Console\Commands\ChangeEnv::class,
+        ]);
     }
 }

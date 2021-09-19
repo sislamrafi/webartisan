@@ -45,12 +45,14 @@ class ArtisanController extends Controller
             return $this->serializeOutput($msg);
         }
 
+        //if(! defined('STDIN')) define('STDIN', fopen("php://stdin","r"));
+
         try {
             $output=[];
             if ($req->command == 'migrate --passport') {
                 $output = $this->passportMigrate();
             } else {
-                \Artisan::call($req->command, $output);
+                \Artisan::call($req->command);
                 $output = \Artisan::output();
             }
             ob_start();
@@ -67,6 +69,7 @@ class ArtisanController extends Controller
             }
             </style>');
         } catch (\Throwable $e) {
+            
             return $this->serializeOutput('<span>Command does not exists.</span>');
         }
     }
@@ -204,7 +207,7 @@ class ArtisanController extends Controller
         $user = $this->getAuthenticatedUser($hasDatabaseConnection);
 
         if($user != null && !isset($user['username'])){
-            $user['username'] = isset($user['email'])?$user['email']:'nousername@auth';
+            $user['username'] = isset($user[config('webartisan.admin_column')])?$user[config('webartisan.admin_column')]:'nousername@auth';
         }
 
         //get custom user from .env
