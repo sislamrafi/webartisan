@@ -39,16 +39,37 @@ class ChangeEnv extends Command
     {
         $path = base_path('.env');
 
+        //return  ' '.is_string($value).' '.is_string($key);
+
         if (!$del) {
             $replaceStr = $key . '=' . $value;
         }else{
             $replaceStr = "";
         }
 
+        $count = 0;
         if (file_exists($path)) {
-            $fileStr = str_replace(
-                $key . '=' . env($key), $replaceStr, file_get_contents($path),$count
-            );
+            if($count == 0 && !empty(env($key))){
+                $fileStr = str_replace(
+                    $key . '=' . env($key), $replaceStr, file_get_contents($path),$count
+                );
+            }
+            if($count == 0 && empty(env($key))){
+                $fileStr = str_replace(
+                    $key . '=' . 'false', $replaceStr, file_get_contents($path),$count
+                );
+            }
+            if($count == 0 && empty(env($key))){
+                $fileStr = str_replace(
+                    $key . '=' . '0', $replaceStr, file_get_contents($path),$count
+                );
+            }
+            if($count == 0 && env($key)==1){
+                $fileStr = str_replace(
+                    $key . '=' . 'true', $replaceStr, file_get_contents($path),$count
+                );
+            }
+            //return $key . '=' . empty(env($key)). ';Count:'. $count;
             if ($count>0) {
                 file_put_contents($path, $fileStr);
                 return $del? '.ENV variable deleted.' :'.ENV variable changed.';
