@@ -31,14 +31,14 @@ This is an example of how to list things you need to use the software and how to
     "repositories": [
          {
              "url": "https://github.com/sislamrafi/webartisan",
-             "type": "git"
+             "type": "vcs"
          }
      ],
     ```
 
 2.  Run Composer Require command
     ```sh
-    composer require sislamrafi/webartisan
+    composer require sislamrafi/webartisan:dev-main
     ```
 3.  Publish package
     ```sh
